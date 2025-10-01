@@ -29,10 +29,10 @@
           <span class="score">1-2</span>
           <div class="team-1 w-50">
             <div class="team-details w-100 text-center">
-              <img src="images/logo_1.png" alt="Escudo" class="img-fluid">    
-              <h3>Club de San Vicente <span>(derrota)</span></h3>
+              <img src={{url_for('static', filename='images/clubsanvicente.jpeg',_external=True)}} alt="Escudo" class="img-fluid">
+              <h3>Club San Vicente <span>(derrota)</span></h3>
               <ul class="list-unstyled">
-                <li>Anja Landry (7)</li>
+                <li>Anja Landry (7')</li>
               </ul>
             </div>
           </div>
@@ -41,8 +41,8 @@
               <img src="static/images/logo1.png" alt="Escudo" class="img-fluid">    
               <h3>C. S. y D. Unidos por el Deporte <span>(victoria)</span></h3>
               <ul class="list-unstyled">
-                <li>Macauly Green (40)</li>
-                <li>Arham Stark (89)</li>
+                <li>Macauly Green (40')</li>
+                <li>Arham Stark (89')</li>
               </ul>
             </div>
           </div>
@@ -84,7 +84,7 @@
         <div class="col-md-4">
           <div class="post-entry">
             <a href="#">
-              <img src={{url_for('static', filename='images/ciclismo2.jpeg',_external=True)}} alt="Logo" class="img-fluid">
+              <img src={{url_for('static', filename='images/futbol.jpg',_external=True)}} alt="Logo" class="img-fluid">
             </a>
             <div class="caption">
               <div class="caption-inner">
@@ -105,14 +105,14 @@
         <div class="col-md-4">
           <div class="post-entry">
             <a href="#">
-              <img src={{url_for('static', filename='images/ciclismo5.jpeg',_external=True)}} alt="Logo" class="img-fluid">
+              <img src={{url_for('static', filename='images/gimnasio.png',_external=True)}} alt="Logo" class="img-fluid">
             </a>
             <div class="caption">
               <div class="caption-inner">
                 <h3 class="mb-3">Torneo de levantamiento de pesas</h3>
                 <div class="author d-flex align-items-center">
                   <div class="img mb-2 mr-3">
-                    <img src="images/person_1.jpg" alt="">
+                    <img src="images/gimnasio.png" alt="">
                   </div>
                   <div class="text">
                     <h4>En nuestro Gym</h4>
@@ -139,15 +139,15 @@
               <div class="widget-vs">
                 <div class="d-flex align-items-center justify-content-around justify-content-between w-100">
                   <div class="team-1 text-center">
-                    <img src="images/logo_1.png" alt="Image">
+                    <img src={{url_for('static', filename='images/logo1.png',_external=True)}} alt="Escudo" class="img-fluid">
                     <h3>C. S. y D. Unidos por el Deporte</h3>
                   </div>
                   <div>
                     <span class="vs"><span>VS</span></span>
                   </div>
                   <div class="team-2 text-center">
-                    <img src="images/logo_2.png" alt="Image">
-                    <h3>Club Coronel Brandsen</h3>
+                    <img src={{url_for('static', filename='images/clubbrandsen.jpeg',_external=True)}} alt="Escudo" class="img-fluid">
+                    <h3>Asociación Coronel Brandsen</h3>
                   </div>
                 </div>
               </div>
@@ -263,11 +263,11 @@
       <div class="col-lg-6">
         <div class="custom-media d-flex">
           <div class="img mr-4">
-            <img src="images/img_1.jpg" alt="Image" class="img-fluid">
+            <img src="static/images/ciclismo4.jpeg" alt="Imagen Evento" class="img-fluid">
           </div>
           <div class="text">
             <span class="meta">May 20, 2020</span>
-            <h3 class="mb-4"><a href="#">Info 1</a></h3>
+            <h3 class="mb-4"><a href="#">Info 1   USAR INFO DEL DICCIONARIO DE APP.PY</a></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.</p>
             <p><a href="#">Read more</a></p>
           </div>
@@ -276,7 +276,7 @@
       <div class="col-lg-6">
         <div class="custom-media d-flex">
           <div class="img mr-4">
-            <img src="images/img_3.jpg" alt="Image" class="img-fluid">
+            <img src="static/images/ciclismo5.jpeg" alt="Imagen Evento" class="img-fluid">
           </div>
           <div class="text">
             <span class="meta">May 20, 2020</span>
