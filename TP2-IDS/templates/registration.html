@@ -3,6 +3,10 @@
 {% block title %}{{page_title}}{% endblock %}
 
 {% block content %}
+
+  <link rel="stylesheet" href={{url_for('static', filename='css/form.css',_external=True)}}>
+
+
     <div class="hero overlay" style="background-image: url(&quot;{{ url_for('static', filename='images/ciclismo2.jpeg', _external=True) }}&quot;);">
       <div class="container">
         <div class="row align-items-center">
@@ -17,23 +21,36 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-7">
-            <form action="#">
+            
+            <form method="POST" action="/register" id="registrationForm">       
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nombre y Apellido">
+                  <input type="text" class="form-control" placeholder="Nombre y Apellido" id="nombreCompletoCompetidor" name="nombre_y_apellido">
               </div>
+              
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="DNI">
+                  <input type="text" class="form-control" placeholder="DNI" id="dniCompetidor" name="dni">
               </div>
+              
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Carrera corta/larga">
+                  <label class="race-toggle-label"> 
+                      <span class="race-label-text">Corta</span> 
+                      <label class="switch">
+                          <input type="checkbox" name="carrera_tipo" value="Larga" id="longitudCarrera">
+                          <span class="slider"></span>
+                      </label>
+                      <span class="race-label">Larga</span>
+                  </label>    
               </div>
+              
               <div class="form-group">
-                <textarea name="" class="form-control" id="" cols="30" rows="10" placeholder="Escribe algo..."></textarea>
+                  <textarea class="form-control" cols="30" rows="10" placeholder="Información extra... (Opcional)" id="extraInfo" name="extra_info"></textarea>
               </div>
+              
               <div class="form-group">
-                <input type="submit" class="btn btn-primary py-3 px-5" value="ENVIAR AL MAIL">
-              </div>
-            </form>  
+                  <input type="submit" class="btn btn-primary py-3 px-5" value="ENVIAR AL MAIL">
+              </div>                     
+            </form>
+
           </div>
           <div class="col-lg-4 ml-auto">
             
@@ -57,4 +74,7 @@
         </div>
       </div>
     </div>
+
+    <script src={{url_for('static', filename='js/form.js',_external=True)}}></script>
+
 {% endblock %}

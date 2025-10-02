@@ -38,7 +38,7 @@
           </div>
           <div class="team-2 w-50">
             <div class="team-details w-100 text-center">
-              <img src="static/images/logo1.png" alt="Escudo" class="img-fluid">    
+              <img src="static/images/nombre.png" alt="Escudo" class="img-fluid">    
               <h3>C. S. y D. Unidos por el Deporte <span>(victoria)</span></h3>
               <ul class="list-unstyled">
                 <li>Macauly Green (40')</li>
@@ -260,10 +260,13 @@
             <img src="static/images/ciclismo4.jpeg" alt="Imagen Evento" class="img-fluid">
           </div>
           <div class="text">
-            <span class="meta">May 20, 2020</span>
-            <h3 class="mb-4"><a href="#">Info 1   USAR INFO DEL DICCIONARIO DE APP.PY</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.</p>
-            <p><a href="#">Read more</a></p>
+            <span class="meta">{{ info["fecha"] }}</span>
+            <h3 class="mb-4"><a href="#">{{ info["nombre"] }}</a></h3>
+            <ul>
+              {% for llave in info %}
+                  <li> {{ info[llave] }} </li> 
+              {% endfor %}
+            </ul>
           </div>
         </div>
       </div>

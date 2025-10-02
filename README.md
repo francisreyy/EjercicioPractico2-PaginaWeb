@@ -1,4 +1,4 @@
-# Página Web
+# Página Web Sin Backend
 
 Repositorio para el EJ2 de IDS [TP: página web](https://github.com/francisreyy/EjercicioPractico2-PaginaWeb) de la materia: **Introducción al Desarrollo de Software - FIUBA**
 
@@ -17,9 +17,6 @@ Repositorio para el EJ2 de IDS [TP: página web](https://github.com/francisreyy/
 - werkzeug==3.0.6
 - zipp==3.20.2
 - flask-mail==0.10.0 **(luego del script por el enunciado del trabajo)**
-
-## Dependencias para editar la página web
-- completar 
 
 ___
 
