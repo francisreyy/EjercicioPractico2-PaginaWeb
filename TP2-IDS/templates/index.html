@@ -133,7 +133,46 @@
         <div class="col-lg-6">
           <div class="widget-next-match">
             <div class="widget-title">
-              <h3>Siguiente Partido</h3>
+
+              <h2>Mapa del Evento de Ciclismo</h2>
+  
+  <!-- Aquí se carga el mapa -->
+  <div id="map"></div>
+
+  <!-- Script para inicializar el mapa -->
+  <script>
+    // Crear mapa centrado en Tandil
+    var map = L.map('map').setView([-37.3217, -59.1332], 12);
+
+    // Tiles de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Rutas (ejemplo)
+    var ruta30 = [
+      [-37.3217, -59.1332],
+      [-37.3300, -59.1200],
+      [-37.3400, -59.1400],
+      [-37.3217, -59.1332]
+    ];
+    var ruta80 = [
+      [-37.3217, -59.1332],
+      [-37.3500, -59.1100],
+      [-37.3600, -59.1500],
+      [-37.3400, -59.1800],
+      [-37.3217, -59.1332]
+    ];
+
+    // Dibujar rutas
+    L.polyline(ruta30, {color: 'blue'}).addTo(map).bindPopup("Recorrido 30 km");
+    L.polyline(ruta80, {color: 'red'}).addTo(map).bindPopup("Recorrido 80 km");
+
+    // Punto de salida/llegada
+    L.marker([-37.3217, -59.1332]).addTo(map)
+      .bindPopup("<b>Salida y llegada</b><br>Evento de Ciclismo Tandil");
+  </script>
+              <!--<h3>Siguiente Partido</h3>
             </div>
             <div class="widget-body mb-3">
               <div class="widget-vs">
@@ -159,99 +198,54 @@
                 <span class="d-block">4 Sep 2025</span>
                 <span class="d-block">15:30 GMT-3</span>
                 <strong class="text-primary">Arena</strong>
-              </p>
+              </p>-->
 
               <div id="date-countdown2" class="pb-1"></div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          
+        
+        <div class="col-lg-6" > 
           <div class="widget-next-match">
             <table class="table custom-table">
               <thead>
                 <tr>
-                  <th>P</th>
-                  <th>Equipos</th>
-                  <th>W</th>
-                  <th>D</th>
-                  <th>L</th>
-                  <th>PTS</th>
+                  <th>#</th>
+                  <th>Imagen</th>
+                  <th>Tipo</th>
+                  <th>Talle</th>
+                  <th>Stock</th>
+                  <th>Precio</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td><strong class="text-white">Football League</strong></td>
-                  <td>22</td>
-                  <td>3</td>
-                  <td>2</td>
-                  <td>140</td>
+                  <td>
+                    <img src="{{ url_for('static', filename='images/jersey.png') }}" 
+                         alt="Jersey Oficial" width="60">
+                  </td>
+                  <td><strong class="text-white">Jersey Oficial</strong></td>
+                  <td>S / M / L / XL</td>
+                  <td>1.000</td>
+                  <td>$70.000</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td><strong class="text-white">Soccer</strong></td>
-                  <td>22</td>
-                  <td>3</td>
-                  <td>2</td>
-                  <td>140</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><strong class="text-white">Juvendo</strong></td>
-                  <td>22</td>
-                  <td>3</td>
-                  <td>2</td>
-                  <td>140</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td><strong class="text-white">French Football League</strong></td>
-                  <td>22</td>
-                  <td>3</td>
-                  <td>2</td>
-                  <td>140</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td><strong class="text-white">Legia Abante</strong></td>
-                  <td>22</td>
-                  <td>3</td>
-                  <td>2</td>
-                  <td>140</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td><strong class="text-white">Gliwice League</strong></td>
-                  <td>22</td>
-                  <td>3</td>
-                  <td>2</td>
-                  <td>140</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td><strong class="text-white">Cornika</strong></td>
-                  <td>22</td>
-                  <td>3</td>
-                  <td>2</td>
-                  <td>140</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td><strong class="text-white">Gravity Smash</strong></td>
-                  <td>22</td>
-                  <td>3</td>
-                  <td>2</td>
-                  <td>140</td>
+                  <td>
+                    <img src="{{ url_for('static', filename='images/pantalon.png') }}" 
+                         alt="Pantalón Corto" width="60">
+                  </td>
+                  <td><strong class="text-white">Pantalón Corto</strong></td>
+                  <td>S / M / L / XL</td>
+                  <td>800</td>
+                  <td>$30.000</td>
                 </tr>
               </tbody>
             </table>
           </div>
-
         </div>
-      </div>
-    </div>
-  </div> <!-- .site-section -->
+         <!-- .site-section -->
 
   <div class="container site-section">
     <div class="row">
