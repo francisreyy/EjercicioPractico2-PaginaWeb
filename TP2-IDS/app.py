@@ -1,9 +1,18 @@
-from flask import Flask, render_template, redirect, url_for
+import os
+from flask import Flask, render_template, request, redirect, url_for, flash
 
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
-
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = 'csyduped@gmail.com'
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = 'csyduped@gmail.com'
+mail = Mail(app)
 
 @app.route("/")
 def index():
